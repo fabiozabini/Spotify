@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/all.min.js"></script>
+
     
     
     <title>Spotify</title>
@@ -161,7 +165,7 @@
             <div class="main__row">
                 <div class="main__row__title"> <h2>Minhas músicas</h2></div>
 
-                <div class="main__col">
+                <div class="main__col" data-image="img/coldplay.png" data-artist="Coldplay" data-song="Paradise" data-file="assets/Paradise.mp3">
                     <img src="img/coldplay.png" alt="imagem coldplay">
                     <h3>This is Coldplay</h3>
                     <p>As melhores da carreira!</p>
@@ -186,11 +190,16 @@
 
         </div>
         <div class="player__control">
-            <div class="player__controll__buttons"></div>
+            <div class="player__control__buttons"></div>
             <a href=""><i class="fas fa-backward"></i></a>
             <a style="display: none;" id="pauseBtn" href="#"><i class="far fa-pause-circle"></i></a>
             <a id="playBtn" href="#"><i class="far fa-play-circle"></i></a>
             <a href=""><i class="fas fa-forward"></i></a>
+        </div>
+
+
+        <div class="player__control__progress">
+            <div style="width: 50%;" class="player__control__progress_2"></div>
         </div>
 
         
@@ -198,8 +207,15 @@
 
     </div> <!--player-->
 
+    <audio id="audioplayer" style="position: absolute; left: 0; top: 0; z-index: -999; opacity: 0;" controls="">
+    
+    </audio>
 
 
-    <script src="js/all.min.js"></script>
+
+
+    <style src="js/main.js" ></style>
+
 </body>
+
 </html>
